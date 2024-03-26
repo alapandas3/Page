@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import icon from './arrow.svg';
 
 const Carousel = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -37,17 +38,18 @@ const Carousel = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <button className=" mt-4 text-lg text-black bg-fuchsia-600 rounded-full p-6 mb-4" onClick={handlePrev}>
-        &lt;
+         
+        <img src={icon} alt=""  className='w-8 rotate-180 '/>
       </button>
       <div className="flex overflow-x-auto space-x-6 m-10 p-4 ">
         {cards.slice(startIndex, startIndex + getVisibleCardCount()).map((card) => (
-          <div key={card.id} className="text-red-600 text-lg p-8 bg-fuchsia-900 backdrop:blur-lg rounded-2xl shadow-lg">
+          <div key={card.id} className="text-red-600 text-lg p-10  bg-fuchsia-900 backdrop:blur-lg rounded-full shadow-lg">
             <p className='text-white'>{card.data}</p>
           </div>
         ))}
       </div>
       <button className=" mt-4 text-lg text-black bg-purple-600 rounded-full p-6 mb-4" onClick={handleNext}>
-        &gt;
+      <img src={icon} alt=""  className='w-8 '/>
       </button>
     </div>
   );

@@ -36,17 +36,17 @@ const Carousel = () => {
   };
   return (
     <div className="flex items-center justify-center h-screen">
-      <button className="bg-gray-200 text-gray-600 rounded-full p-2 mb-4" onClick={handlePrev}>
+      <button className="bg-gray-200 mt-4 text-lg text-gray-600 rounded-full p-4 mb-4" onClick={handlePrev}>
         &lt;
       </button>
-      <div className="flex overflow-x-auto space-x-6 m-10">
+      <div className="flex overflow-x-auto space-x-6 m-10 ">
         {cards.slice(startIndex, startIndex + getVisibleCardCount()).map((card) => (
-          <div key={card.id} className="text-red-600 p-4 shadow-lg">
+          <div key={card.id} className="text-red-600 text-lg p-6 bg-slate-800 rounded-2xl shadow-lg">
             <p className='text-white'>{card.data}</p>
           </div>
         ))}
       </div>
-      <button className="bg-gray-200 text-gray-600 rounded-full p-2 mb-4" onClick={handleNext}>
+      <button className="bg-gray-200 mt-4 text-lg text-gray-600 rounded-full p-4 mb-4" onClick={handleNext}>
         &gt;
       </button>
     </div>

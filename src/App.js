@@ -7,12 +7,11 @@ function App() {
 
   return (
     <>
-      
-<div className='bg-gradient-to-r from-pink-700 via-fuchsia-800 to-violet-900'>
 
-          <Cards />
-</div>
-      
+      <div className='bg-gradient-to-r from-pink-700 via-fuchsia-800 to-violet-900'>
+        <Cards />
+      </div>
+
     </>
   );
 }
